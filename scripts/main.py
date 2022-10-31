@@ -23,7 +23,7 @@ dc = DepthCamera()
 
 while True:
 
-    ret, depth_frame, rgb_frame = dc.get_frame()
+    ret, depth_frame, rgb_frame, lir_frame, rir_frame = dc.get_frame()
     depth_abs = cv2.convertScaleAbs(depth_frame, alpha=0.03)
     depth_cmap = cv2.applyColorMap(depth_abs, cv2.COLORMAP_JET)
     
